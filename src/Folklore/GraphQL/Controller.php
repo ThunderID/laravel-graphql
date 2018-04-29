@@ -3,16 +3,16 @@
 use Illuminate\Routing\Controller as LaravelController;
 use Laravel\Lumen\Routing\Controller as LumenController;
 
-if (class_exists('Illuminate\Routing\Controller')) {
+if (class_exists('Laravel\Lumen\Routing\Controller')) {
     
-    class Controller extends LaravelController
+    class Controller extends LumenController
     {
         
     }
     
-} elseif (class_exists('Laravel\Lumen\Routing\Controller')) {
+} elseif (class_exists('Illuminate\Routing\Controller')) {
     
-    class Controller extends LumenController
+    class Controller extends LaravelController
     {
         
     }
